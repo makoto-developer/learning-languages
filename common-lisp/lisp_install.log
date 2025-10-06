@@ -1,0 +1,70 @@
+bind: No binding found for sequence '^/dev/null'
+source: Error encountered while sourcing file '/usr/local/opt/asdf/libexec/asdf.fish':
+source: No such file or directory
+Welcome to fish, the friendly interactive shell
+Type help for instructions on how to use fish
+⋊> ~/work/github.com/makoto-developer/learning-common-lisp on main ⨯ curl -O https://beta.quicklisp.org/quicklisp.lisp                       10:33:59
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 57144  100 57144    0     0  80233      0 --:--:-- --:--:-- --:--:-- 80145
+⋊> ~/work/github.com/makoto-developer/learning-common-lisp on main ⨯ ls                                                                      10:34:09
+README.md      quicklisp.lisp
+⋊> ~/work/github.com/makoto-developer/learning-common-lisp on main ⨯ sbcl --load quicklisp.lisp                                              10:34:11
+This is SBCL 2.5.1, an implementation of ANSI Common Lisp.
+More information about SBCL is available at <http://www.sbcl.org/>.
+
+SBCL is free software, provided as is, with absolutely no warranty.
+It is mostly in the public domain; some portions are provided under
+BSD-style licenses.  See the CREDITS and COPYING files in the
+distribution for more information.
+
+  ==== quicklisp quickstart 2015-01-28 loaded ====
+
+    To continue with installation, evaluate: (quicklisp-quickstart:install)
+
+    For installation options, evaluate: (quicklisp-quickstart:help)
+
+* (quicklisp-quickstart:install)
+; Fetching #<URL "http://beta.quicklisp.org/client/quicklisp.sexp">
+; 0.82KB
+==================================================
+839 bytes in 0.00 seconds (1853.70KB/sec)
+; Fetching #<URL "http://beta.quicklisp.org/client/2021-02-13/quicklisp.tar">
+; 260.00KB
+==================================================
+266,240 bytes in 0.05 seconds (5686.42KB/sec)
+; Fetching #<URL "http://beta.quicklisp.org/client/2021-02-11/setup.lisp">
+; 4.94KB
+==================================================
+5,057 bytes in 0.00 seconds (6096.88KB/sec)
+; Fetching #<URL "http://beta.quicklisp.org/asdf/3.2.1/asdf.lisp">
+; 628.18KB
+==================================================
+643,253 bytes in 0.72 seconds (867.66KB/sec)
+; Fetching #<URL "http://beta.quicklisp.org/dist/quicklisp.txt">
+; 0.40KB
+==================================================
+408 bytes in 0.00 seconds (856.85KB/sec)
+Installing dist "quicklisp" version "2025-06-22".
+; Fetching #<URL "http://beta.quicklisp.org/dist/quicklisp/2025-06-22/releases.txt">
+; 559.72KB
+==================================================
+573,154 bytes in 0.03 seconds (16623.23KB/sec)
+; Fetching #<URL "http://beta.quicklisp.org/dist/quicklisp/2025-06-22/systems.txt">
+; 438.93KB
+==================================================
+449,461 bytes in 0.05 seconds (8524.84KB/sec)
+
+  ==== quicklisp installed ====
+
+    To load a system, use: (ql:quickload "system-name")
+
+    To find systems, use: (ql:system-apropos "term")
+
+    To load Quicklisp every time you start Lisp, use: (ql:add-to-init-file)
+
+    For more information, see http://www.quicklisp.org/beta/
+
+NIL
+*
+

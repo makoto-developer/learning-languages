@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "learning-standard-ml"
+version = "0.1.0"
+description = "Learning Standard ML"
+authors = ["makoto-developer <72484465+makoto-developer@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+jupyterlab = "^4.0.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
