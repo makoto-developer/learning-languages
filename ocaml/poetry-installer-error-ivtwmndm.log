@@ -1,0 +1,288 @@
+Collecting poetry==2.0.1
+  Using cached poetry-2.0.1-py3-none-any.whl.metadata (7.0 kB)
+Collecting build<2.0.0,>=1.2.1 (from poetry==2.0.1)
+  Using cached build-1.2.2.post1-py3-none-any.whl.metadata (6.5 kB)
+Collecting cachecontrol<0.15.0,>=0.14.0 (from cachecontrol[filecache]<0.15.0,>=0.14.0->poetry==2.0.1)
+  Using cached cachecontrol-0.14.2-py3-none-any.whl.metadata (3.1 kB)
+Collecting cleo<3.0.0,>=2.1.0 (from poetry==2.0.1)
+  Using cached cleo-2.1.0-py3-none-any.whl.metadata (12 kB)
+Collecting dulwich<0.23.0,>=0.22.6 (from poetry==2.0.1)
+  Using cached dulwich-0.22.7-py3-none-any.whl.metadata (4.4 kB)
+Collecting fastjsonschema<3.0.0,>=2.18.0 (from poetry==2.0.1)
+  Using cached fastjsonschema-2.21.1-py3-none-any.whl.metadata (2.2 kB)
+Collecting installer<0.8.0,>=0.7.0 (from poetry==2.0.1)
+  Using cached installer-0.7.0-py3-none-any.whl.metadata (936 bytes)
+Collecting keyring<26.0.0,>=25.1.0 (from poetry==2.0.1)
+  Using cached keyring-25.6.0-py3-none-any.whl.metadata (20 kB)
+Collecting packaging>=24.0 (from poetry==2.0.1)
+  Using cached packaging-24.2-py3-none-any.whl.metadata (3.2 kB)
+Collecting pkginfo<2.0,>=1.12 (from poetry==2.0.1)
+  Using cached pkginfo-1.12.0-py3-none-any.whl.metadata (12 kB)
+Collecting platformdirs<5,>=3.0.0 (from poetry==2.0.1)
+  Using cached platformdirs-4.3.6-py3-none-any.whl.metadata (11 kB)
+Collecting poetry-core==2.0.1 (from poetry==2.0.1)
+  Using cached poetry_core-2.0.1-py3-none-any.whl.metadata (3.5 kB)
+Collecting pyproject-hooks<2.0.0,>=1.0.0 (from poetry==2.0.1)
+  Using cached pyproject_hooks-1.2.0-py3-none-any.whl.metadata (1.3 kB)
+Collecting requests<3.0,>=2.26 (from poetry==2.0.1)
+  Using cached requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting requests-toolbelt<2.0.0,>=1.0.0 (from poetry==2.0.1)
+  Using cached requests_toolbelt-1.0.0-py2.py3-none-any.whl.metadata (14 kB)
+Collecting shellingham<2.0,>=1.5 (from poetry==2.0.1)
+  Using cached shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+Collecting tomlkit<1.0.0,>=0.11.4 (from poetry==2.0.1)
+  Using cached tomlkit-0.13.2-py3-none-any.whl.metadata (2.7 kB)
+Collecting trove-classifiers>=2022.5.19 (from poetry==2.0.1)
+  Using cached trove_classifiers-2025.1.15.22-py3-none-any.whl.metadata (2.3 kB)
+Collecting virtualenv<21.0.0,>=20.26.6 (from poetry==2.0.1)
+  Using cached virtualenv-20.29.0-py3-none-any.whl.metadata (4.5 kB)
+Collecting xattr<2.0.0,>=1.0.0 (from poetry==2.0.1)
+  Using cached xattr-1.1.4.tar.gz (16 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting msgpack<2.0.0,>=0.5.2 (from cachecontrol<0.15.0,>=0.14.0->cachecontrol[filecache]<0.15.0,>=0.14.0->poetry==2.0.1)
+  Using cached msgpack-1.1.0.tar.gz (167 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting filelock>=3.8.0 (from cachecontrol[filecache]<0.15.0,>=0.14.0->poetry==2.0.1)
+  Using cached filelock-3.16.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting crashtest<0.5.0,>=0.4.1 (from cleo<3.0.0,>=2.1.0->poetry==2.0.1)
+  Using cached crashtest-0.4.1-py3-none-any.whl.metadata (1.1 kB)
+Collecting rapidfuzz<4.0.0,>=3.0.0 (from cleo<3.0.0,>=2.1.0->poetry==2.0.1)
+  Using cached rapidfuzz-3.11.0-py3-none-any.whl
+Collecting urllib3>=1.25 (from dulwich<0.23.0,>=0.22.6->poetry==2.0.1)
+  Using cached urllib3-2.3.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting jaraco.classes (from keyring<26.0.0,>=25.1.0->poetry==2.0.1)
+  Using cached jaraco.classes-3.4.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting jaraco.functools (from keyring<26.0.0,>=25.1.0->poetry==2.0.1)
+  Using cached jaraco.functools-4.1.0-py3-none-any.whl.metadata (2.9 kB)
+Collecting jaraco.context (from keyring<26.0.0,>=25.1.0->poetry==2.0.1)
+  Using cached jaraco.context-6.0.1-py3-none-any.whl.metadata (4.1 kB)
+Collecting charset-normalizer<4,>=2 (from requests<3.0,>=2.26->poetry==2.0.1)
+  Using cached charset_normalizer-3.4.1-py3-none-any.whl.metadata (35 kB)
+Collecting idna<4,>=2.5 (from requests<3.0,>=2.26->poetry==2.0.1)
+  Using cached idna-3.10-py3-none-any.whl.metadata (10 kB)
+Collecting certifi>=2017.4.17 (from requests<3.0,>=2.26->poetry==2.0.1)
+  Using cached certifi-2024.12.14-py3-none-any.whl.metadata (2.3 kB)
+Collecting distlib<1,>=0.3.7 (from virtualenv<21.0.0,>=20.26.6->poetry==2.0.1)
+  Using cached distlib-0.3.9-py2.py3-none-any.whl.metadata (5.2 kB)
+Collecting cffi>=1.16.0 (from xattr<2.0.0,>=1.0.0->poetry==2.0.1)
+  Using cached cffi-1.17.1-cp313-cp313t-macosx_15_0_x86_64.whl
+Collecting pycparser (from cffi>=1.16.0->xattr<2.0.0,>=1.0.0->poetry==2.0.1)
+  Using cached pycparser-2.22-py3-none-any.whl.metadata (943 bytes)
+Collecting more-itertools (from jaraco.classes->keyring<26.0.0,>=25.1.0->poetry==2.0.1)
+  Using cached more_itertools-10.6.0-py3-none-any.whl.metadata (37 kB)
+Using cached poetry-2.0.1-py3-none-any.whl (254 kB)
+Using cached poetry_core-2.0.1-py3-none-any.whl (544 kB)
+Using cached build-1.2.2.post1-py3-none-any.whl (22 kB)
+Using cached cachecontrol-0.14.2-py3-none-any.whl (21 kB)
+Using cached cleo-2.1.0-py3-none-any.whl (78 kB)
+Using cached dulwich-0.22.7-py3-none-any.whl (265 kB)
+Using cached fastjsonschema-2.21.1-py3-none-any.whl (23 kB)
+Using cached installer-0.7.0-py3-none-any.whl (453 kB)
+Using cached keyring-25.6.0-py3-none-any.whl (39 kB)
+Using cached packaging-24.2-py3-none-any.whl (65 kB)
+Using cached pkginfo-1.12.0-py3-none-any.whl (32 kB)
+Using cached platformdirs-4.3.6-py3-none-any.whl (18 kB)
+Using cached pyproject_hooks-1.2.0-py3-none-any.whl (10 kB)
+Using cached requests-2.32.3-py3-none-any.whl (64 kB)
+Using cached requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+Using cached shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+Using cached tomlkit-0.13.2-py3-none-any.whl (37 kB)
+Using cached trove_classifiers-2025.1.15.22-py3-none-any.whl (13 kB)
+Using cached virtualenv-20.29.0-py3-none-any.whl (4.3 MB)
+Using cached certifi-2024.12.14-py3-none-any.whl (164 kB)
+Using cached charset_normalizer-3.4.1-py3-none-any.whl (49 kB)
+Using cached crashtest-0.4.1-py3-none-any.whl (7.6 kB)
+Using cached distlib-0.3.9-py2.py3-none-any.whl (468 kB)
+Using cached filelock-3.16.1-py3-none-any.whl (16 kB)
+Using cached idna-3.10-py3-none-any.whl (70 kB)
+Using cached urllib3-2.3.0-py3-none-any.whl (128 kB)
+Using cached jaraco.classes-3.4.0-py3-none-any.whl (6.8 kB)
+Using cached jaraco.context-6.0.1-py3-none-any.whl (6.8 kB)
+Using cached jaraco.functools-4.1.0-py3-none-any.whl (10 kB)
+Using cached more_itertools-10.6.0-py3-none-any.whl (63 kB)
+Using cached pycparser-2.22-py3-none-any.whl (117 kB)
+Building wheels for collected packages: xattr, msgpack
+  Building wheel for xattr (pyproject.toml): started
+  Building wheel for xattr (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Building wheel for xattr (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [86 lines of output]
+      <frozen importlib._bootstrap>:488: RuntimeWarning: The global interpreter lock (GIL) has been enabled to load module '_cffi_backend', which has not declared that it can run safely without the GIL. To override this behavior and keep the GIL disabled (at your own risk), run with PYTHON_GIL=0 or -Xgil=0.
+      running bdist_wheel
+      running build
+      running build_py
+      creating build/lib.macosx-15.2-x86_64-cpython-313t/xattr
+      copying xattr/lib_build.py -> build/lib.macosx-15.2-x86_64-cpython-313t/xattr
+      copying xattr/lib.py -> build/lib.macosx-15.2-x86_64-cpython-313t/xattr
+      copying xattr/__init__.py -> build/lib.macosx-15.2-x86_64-cpython-313t/xattr
+      copying xattr/tool.py -> build/lib.macosx-15.2-x86_64-cpython-313t/xattr
+      copying xattr/pyxattr_compat.py -> build/lib.macosx-15.2-x86_64-cpython-313t/xattr
+      running egg_info
+      writing xattr.egg-info/PKG-INFO
+      writing dependency_links to xattr.egg-info/dependency_links.txt
+      writing entry points to xattr.egg-info/entry_points.txt
+      writing requirements to xattr.egg-info/requires.txt
+      writing top-level names to xattr.egg-info/top_level.txt
+      reading manifest file 'xattr.egg-info/SOURCES.txt'
+      reading manifest template 'MANIFEST.in'
+      adding license file 'LICENSE.txt'
+      writing manifest file 'xattr.egg-info/SOURCES.txt'
+      copying xattr/lib_build.c -> build/lib.macosx-15.2-x86_64-cpython-313t/xattr
+      copying xattr/lib_build.h -> build/lib.macosx-15.2-x86_64-cpython-313t/xattr
+      running build_ext
+      generating cffi module 'build/temp.macosx-15.2-x86_64-cpython-313t/_lib.c'
+      creating build/temp.macosx-15.2-x86_64-cpython-313t
+      building '_lib' extension
+      creating build/temp.macosx-15.2-x86_64-cpython-313t/build/temp.macosx-15.2-x86_64-cpython-313t
+      clang -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -I/Users/user/.asdf/installs/poetry/2.0.1/venv/include -I/Users/user/.asdf/installs/python/3.13.1t/include/python3.13t -c build/temp.macosx-15.2-x86_64-cpython-313t/_lib.c -o build/temp.macosx-15.2-x86_64-cpython-313t/build/temp.macosx-15.2-x86_64-cpython-313t/_lib.o
+      In file included from build/temp.macosx-15.2-x86_64-cpython-313t/_lib.c:57:
+      /Users/user/.asdf/installs/python/3.13.1t/include/python3.13t/Python.h:51:4: error: "The limited API is not currently supported in the free-threaded build"
+         51 | #  error "The limited API is not currently supported in the free-threaded build"
+            |    ^
+      In file included from build/temp.macosx-15.2-x86_64-cpython-313t/_lib.c:57:
+      In file included from /Users/user/.asdf/installs/python/3.13.1t/include/python3.13t/Python.h:72:
+      /Users/user/.asdf/installs/python/3.13.1t/include/python3.13t/object.h:213:5: error: unknown type name 'PyMutex'
+        213 |     PyMutex ob_mutex;           // per-object lock
+            |     ^
+      /Users/user/.asdf/installs/python/3.13.1t/include/python3.13t/object.h:320:22: error: call to undeclared function '_Py_atomic_load_uint32_relaxed'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        320 |     uint32_t local = _Py_atomic_load_uint32_relaxed(&ob->ob_ref_local);
+            |                      ^
+      /Users/user/.asdf/installs/python/3.13.1t/include/python3.13t/object.h:324:25: error: call to undeclared function '_Py_atomic_load_ssize_relaxed'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        324 |     Py_ssize_t shared = _Py_atomic_load_ssize_relaxed(&ob->ob_ref_shared);
+            |                         ^
+      /Users/user/.asdf/installs/python/3.13.1t/include/python3.13t/object.h:358:13: error: call to undeclared function '_Py_atomic_load_uint32_relaxed'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        358 |     return (_Py_atomic_load_uint32_relaxed(&op->ob_ref_local) ==
+            |             ^
+      /Users/user/.asdf/installs/python/3.13.1t/include/python3.13t/object.h:358:63: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+        358 |     return (_Py_atomic_load_uint32_relaxed(&op->ob_ref_local) ==
+            |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^
+        359 |             _Py_IMMORTAL_REFCNT_LOCAL);
+            |             ~~~~~~~~~~~~~~~~~~~~~~~~~
+      /Users/user/.asdf/installs/python/3.13.1t/include/python3.13t/object.h:396:9: error: call to undeclared function '_Py_IsOwnedByCurrentThread'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        396 |     if (_Py_IsOwnedByCurrentThread(ob)) {
+            |         ^
+      /Users/user/.asdf/installs/python/3.13.1t/include/python3.13t/object.h:436:5: error: call to undeclared function '_Py_atomic_store_ssize_relaxed'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        436 |     _Py_atomic_store_ssize_relaxed(&ob->ob_size, size);
+            |     ^
+      /Users/user/.asdf/installs/python/3.13.1t/include/python3.13t/object.h:810:22: error: call to undeclared function '_Py_atomic_load_uint32_relaxed'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        810 |     uint32_t local = _Py_atomic_load_uint32_relaxed(&op->ob_ref_local);
+            |                      ^
+      /Users/user/.asdf/installs/python/3.13.1t/include/python3.13t/object.h:816:9: error: call to undeclared function '_Py_IsOwnedByCurrentThread'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        816 |     if (_Py_IsOwnedByCurrentThread(op)) {
+            |         ^
+      /Users/user/.asdf/installs/python/3.13.1t/include/python3.13t/object.h:817:9: error: call to undeclared function '_Py_atomic_store_uint32_relaxed'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        817 |         _Py_atomic_store_uint32_relaxed(&op->ob_ref_local, new_local);
+            |         ^
+      /Users/user/.asdf/installs/python/3.13.1t/include/python3.13t/object.h:820:9: error: call to undeclared function '_Py_atomic_add_ssize'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        820 |         _Py_atomic_add_ssize(&op->ob_ref_shared, (1 << _Py_REF_SHARED_SHIFT));
+            |         ^
+      /Users/user/.asdf/installs/python/3.13.1t/include/python3.13t/object.h:904:22: error: call to undeclared function '_Py_atomic_load_uint32_relaxed'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        904 |     uint32_t local = _Py_atomic_load_uint32_relaxed(&op->ob_ref_local);
+            |                      ^
+      /Users/user/.asdf/installs/python/3.13.1t/include/python3.13t/object.h:909:9: error: call to undeclared function '_Py_IsOwnedByCurrentThread'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        909 |     if (_Py_IsOwnedByCurrentThread(op)) {
+            |         ^
+      /Users/user/.asdf/installs/python/3.13.1t/include/python3.13t/object.h:911:9: error: call to undeclared function '_Py_atomic_store_uint32_relaxed'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        911 |         _Py_atomic_store_uint32_relaxed(&op->ob_ref_local, local);
+            |         ^
+      /Users/user/.asdf/installs/python/3.13.1t/include/python3.13t/object.h:913:13: error: call to undeclared function '_Py_MergeZeroLocalRefcount'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        913 |             _Py_MergeZeroLocalRefcount(op);
+            |             ^
+      /Users/user/.asdf/installs/python/3.13.1t/include/python3.13t/object.h:917:9: error: call to undeclared function '_Py_DecRefShared'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        917 |         _Py_DecRefShared(op);
+            |         ^
+      1 warning and 16 errors generated.
+      error: command '/usr/bin/clang' failed with exit code 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for xattr
+  Building wheel for msgpack (pyproject.toml): started
+  Building wheel for msgpack (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Building wheel for msgpack (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [54 lines of output]
+      running bdist_wheel
+      running build
+      running build_py
+      creating build/lib.macosx-15.2-x86_64-cpython-313t/msgpack
+      copying msgpack/__init__.py -> build/lib.macosx-15.2-x86_64-cpython-313t/msgpack
+      copying msgpack/exceptions.py -> build/lib.macosx-15.2-x86_64-cpython-313t/msgpack
+      copying msgpack/fallback.py -> build/lib.macosx-15.2-x86_64-cpython-313t/msgpack
+      copying msgpack/ext.py -> build/lib.macosx-15.2-x86_64-cpython-313t/msgpack
+      running build_ext
+      building 'msgpack._cmsgpack' extension
+      creating build/temp.macosx-15.2-x86_64-cpython-313t/msgpack
+      clang -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -I. -I/Users/user/.asdf/installs/poetry/2.0.1/venv/include -I/Users/user/.asdf/installs/python/3.13.1t/include/python3.13t -c msgpack/_cmsgpack.c -o build/temp.macosx-15.2-x86_64-cpython-313t/msgpack/_cmsgpack.o
+      msgpack/_cmsgpack.c:2343:80: error: unknown type name '__pyx_vectorcallfunc'; did you mean 'vectorcallfunc'?
+       2343 | static CYTHON_INLINE PyObject *__Pyx_PyVectorcall_FastCallDict(PyObject *func, __pyx_vectorcallfunc vc, PyObject *const *args, size_t nargs, PyObject *kw);
+            |                                                                                ^~~~~~~~~~~~~~~~~~~~
+            |                                                                                vectorcallfunc
+      /Users/user/.asdf/installs/python/3.13.1t/include/python3.13t/object.h:495:21: note: 'vectorcallfunc' declared here
+        495 | typedef PyObject *(*vectorcallfunc)(PyObject *callable, PyObject *const *args,
+            |                     ^
+      msgpack/_cmsgpack.c:6941:16: warning: 'Py_OptimizeFlag' is deprecated [-Wdeprecated-declarations]
+       6941 |   if (unlikely(__pyx_assertions_enabled())) {
+            |                ^
+      msgpack/_cmsgpack.c:2027:41: note: expanded from macro '__pyx_assertions_enabled'
+       2027 |   #define __pyx_assertions_enabled()  (!Py_OptimizeFlag)
+            |                                         ^
+      /Users/user/.asdf/installs/python/3.13.1t/include/python3.13t/cpython/pydebug.h:13:1: note: 'Py_OptimizeFlag' has been explicitly marked deprecated here
+         13 | Py_DEPRECATED(3.12) PyAPI_DATA(int) Py_OptimizeFlag;
+            | ^
+      /Users/user/.asdf/installs/python/3.13.1t/include/python3.13t/pyport.h:251:54: note: expanded from macro 'Py_DEPRECATED'
+        251 | #define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+            |                                                      ^
+      msgpack/_cmsgpack.c:21391:69: error: unknown type name '__pyx_vectorcallfunc'; did you mean 'vectorcallfunc'?
+       21391 | static PyObject *__Pyx_PyVectorcall_FastCallDict_kw(PyObject *func, __pyx_vectorcallfunc vc, PyObject *const *args, size_t nargs, PyObject *kw)
+             |                                                                     ^~~~~~~~~~~~~~~~~~~~
+             |                                                                     vectorcallfunc
+      /Users/user/.asdf/installs/python/3.13.1t/include/python3.13t/object.h:495:21: note: 'vectorcallfunc' declared here
+        495 | typedef PyObject *(*vectorcallfunc)(PyObject *callable, PyObject *const *args,
+            |                     ^
+      msgpack/_cmsgpack.c:21436:80: error: unknown type name '__pyx_vectorcallfunc'; did you mean 'vectorcallfunc'?
+       21436 | static CYTHON_INLINE PyObject *__Pyx_PyVectorcall_FastCallDict(PyObject *func, __pyx_vectorcallfunc vc, PyObject *const *args, size_t nargs, PyObject *kw)
+             |                                                                                ^~~~~~~~~~~~~~~~~~~~
+             |                                                                                vectorcallfunc
+      /Users/user/.asdf/installs/python/3.13.1t/include/python3.13t/object.h:495:21: note: 'vectorcallfunc' declared here
+        495 | typedef PyObject *(*vectorcallfunc)(PyObject *callable, PyObject *const *args,
+            |                     ^
+      msgpack/_cmsgpack.c:22125:6: error: unknown type name '__pyx_vectorcallfunc'; did you mean 'vectorcallfunc'?
+       22125 |      __pyx_vectorcallfunc vc = __Pyx_CyFunction_func_vectorcall(cyfunc);
+             |      ^~~~~~~~~~~~~~~~~~~~
+             |      vectorcallfunc
+      /Users/user/.asdf/installs/python/3.13.1t/include/python3.13t/object.h:495:21: note: 'vectorcallfunc' declared here
+        495 | typedef PyObject *(*vectorcallfunc)(PyObject *callable, PyObject *const *args,
+            |                     ^
+      1 warning and 4 errors generated.
+      error: command '/usr/bin/clang' failed with exit code 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for msgpack
+Failed to build xattr msgpack
+ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based projects (xattr, msgpack)
+
+Traceback:
+
+  File "<stdin>", line 937, in main
+  File "<stdin>", line 574, in run
+  File "<stdin>", line 596, in install
+  File "<stdin>", line 699, in install_poetry
+  File "<stdin>", line 389, in pip
+  File "<stdin>", line 386, in python
+  File "<stdin>", line 379, in run
