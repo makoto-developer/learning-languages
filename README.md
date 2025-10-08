@@ -1,4 +1,3 @@
 # Programming Language
 
-自分用のメモ用
-
+ちょっと調べた時のメモ
