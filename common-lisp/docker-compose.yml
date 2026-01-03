@@ -1,3 +1,6 @@
+# SBCL REPL環境
+# 使用方法: docker compose up -d
+
 services:
   sbcl:
     build:

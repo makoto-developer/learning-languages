@@ -1,0 +1,85 @@
+# Jupyter Notebook + Common Lisp環境 - セキュア設定（Alpine版）
+FROM clfoundation/sbcl:2.5.10-alpine3.22
+
+# ビルド引数
+ARG USER_ID=1000
+
+# セキュリティ: 非rootユーザーで実行
+RUN adduser -D -u ${USER_ID} -s /bin/sh lispuser
+
+# 必要なパッケージをインストール
+RUN apk add --no-cache \
+    python3 \
+    py3-pip \
+    git \
+    zeromq-dev \
+    build-base
+
+# 作業ディレクトリ設定
+WORKDIR /app
+
+# Quicklispインストール（キャッシュ最適化）
+COPY --chown=lispuser:lispuser quicklisp.lisp /tmp/quicklisp.lisp
+USER lispuser
+RUN sbcl --non-interactive \
+    --load /tmp/quicklisp.lisp \
+    --eval '(quicklisp-quickstart:install :path "/home/lispuser/quicklisp")' && \
+    rm /tmp/quicklisp.lisp
+USER root
+
+# Quicklisp自動読み込み設定
+RUN mkdir -p /home/lispuser && \
+    echo '#-quicklisp' >> /home/lispuser/.sbclrc && \
+    echo '(let ((quicklisp-init (merge-pathnames "quicklisp/setup.lisp" (user-homedir-pathname))))' >> /home/lispuser/.sbclrc && \
+    echo '  (when (probe-file quicklisp-init)' >> /home/lispuser/.sbclrc && \
+    echo '    (load quicklisp-init)))' >> /home/lispuser/.sbclrc && \
+    chown lispuser:lispuser /home/lispuser/.sbclrc
+
+# 削除: Roswell経由のインストールは不要
+# common-lisp-jupyterは後でlispuserユーザーがインストールする
+
+# Jupyter Notebookとcommon-lisp-jupyterをインストール
+RUN pip3 install --no-cache-dir --break-system-packages \
+    jupyter \
+    notebook
+
+# common-lisp-jupyterのライブラリをロード（カーネルspecは手動作成）
+USER lispuser
+RUN sbcl --non-interactive \
+    --load /home/lispuser/quicklisp/setup.lisp \
+    --eval '(ql:quickload :common-lisp-jupyter)' \
+    --quit
+
+# カーネルspecを手動作成
+RUN mkdir -p /home/lispuser/.local/share/jupyter/kernels/common-lisp && \
+    cat > /home/lispuser/.local/share/jupyter/kernels/common-lisp/kernel.json <<'EOF'
+{
+  "argv": [
+    "sbcl",
+    "--noinform",
+    "--non-interactive",
+    "--eval", "(ql:quickload :common-lisp-jupyter)",
+    "--eval", "(jupyter:run-kernel 'jupyter/common-lisp:kernel {connection_file})"
+  ],
+  "display_name": "Common Lisp",
+  "language": "common-lisp",
+  "interrupt_mode": "message",
+  "metadata": {
+    "debugger": true
+  }
+}
+EOF
+
+# 依存関係インストール用ディレクトリ
+USER root
+RUN mkdir -p /app/src/notebooks && chown -R lispuser:lispuser /app
+
+# 非rootユーザーに切り替え
+USER lispuser
+
+# Jupyter設定
+ENV JUPYTER_ENABLE_LAB=yes
+
+# デフォルトコマンド: Jupyter Notebook起動
+# 環境変数 JUPYTER_TOKEN でトークンを設定可能
+CMD ["sh", "-c", "jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --NotebookApp.token=\"${JUPYTER_TOKEN:-}\" --NotebookApp.password=''"]

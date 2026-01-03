@@ -1,0 +1,54 @@
+# Jupyter Notebook環境
+# 使用方法: docker compose -f docker-compose-jupyter.yml up -d
+
+services:
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile.jupyter
+      args:
+        - USER_ID=${USER_ID:-1000}
+    container_name: ${JUPYTER_CONTAINER_NAME:-common-lisp-jupyter}
+
+    # セキュリティ設定
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - SETUID
+      - SETGID
+    read_only: false
+
+    # リソース制限
+    mem_limit: ${JUPYTER_MEMORY_LIMIT:-1g}
+    cpus: ${JUPYTER_CPU_LIMIT:-2.0}
+
+    # ボリュームマウント
+    volumes:
+      # srcディレクトリをマウント（読み書き可能）
+      - ./src:/app/src:rw
+      # Quicklispキャッシュを永続化（REPL環境と共有）
+      - quicklisp-cache:/home/lispuser/quicklisp
+      # Jupyterキャッシュを永続化
+      - jupyter-cache:/home/lispuser/.local
+
+    # ポート公開（セキュリティ: localhostのみ）
+    ports:
+      - "${JUPYTER_HOST:-127.0.0.1}:${JUPYTER_PORT:-8888}:8888"
+
+    # 環境変数
+    environment:
+      - LANG=${LANG:-C.UTF-8}
+      - LC_ALL=${LC_ALL:-C.UTF-8}
+      - JUPYTER_TOKEN=${JUPYTER_TOKEN:-}
+
+    # ネットワーク
+    network_mode: bridge
+
+volumes:
+  quicklisp-cache:
+    driver: local
+  jupyter-cache:
+    driver: local
