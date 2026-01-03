@@ -32,3 +32,9 @@ temp/
 *~
 \#*
 .\#*
+
+# Jupyter Notebook関連
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+__pycache__/
+*.pyc
