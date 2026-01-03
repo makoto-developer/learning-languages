@@ -1,0 +1,46 @@
+services:
+  sbcl:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - USER_ID=${USER_ID:-1000}
+    container_name: ${CONTAINER_NAME:-common-lisp-dev}
+
+    # セキュリティ設定
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - SETUID
+      - SETGID
+    read_only: false  # Quicklispがファイル書き込みを行うため
+
+    # リソース制限
+    mem_limit: ${MEMORY_LIMIT:-512m}
+    cpus: ${CPU_LIMIT:-1.0}
+
+    # ボリュームマウント
+    volumes:
+      # srcディレクトリをマウント（読み書き可能）
+      - ./src:/app/src:rw
+      # Quicklispキャッシュを永続化
+      - quicklisp-cache:/home/lispuser/quicklisp
+
+    # インタラクティブモード
+    stdin_open: true
+    tty: true
+
+    # 環境変数
+    environment:
+      - LANG=${LANG:-C.UTF-8}
+      - LC_ALL=${LC_ALL:-C.UTF-8}
+
+    # ネットワーク: 外部接続なし（必要に応じて変更）
+    network_mode: bridge
+
+volumes:
+  quicklisp-cache:
+    driver: local
