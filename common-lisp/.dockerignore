@@ -1,0 +1,36 @@
+# Git関連
+.git
+.gitignore
+.gitattributes
+
+# Claude関連
+.claude
+
+# macOS関連
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ログファイル
+*.log
+
+# エディタ関連
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# Docker関連
+docker-compose.yml
+Dockerfile
+.dockerignore
+
+# ドキュメント
+README.md
+*.md
+
+# 一時ファイル
+tmp/
+temp/
+*.tmp

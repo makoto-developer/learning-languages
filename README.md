@@ -1,3 +1,3 @@
 # Programming Language
 
-ちょっと調べた時のメモ
+調べた時のメモ
